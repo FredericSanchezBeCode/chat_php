@@ -1,6 +1,4 @@
 <form action="index.php" method="post">
-        <label for="">Email</label><br>
-        <input type="email" name="email"><br>
         <label for="">Username</label><br>
         <input type="text" name="username"><br>
         <label for="">Password</label><br>
@@ -11,18 +9,18 @@
 <?php
     include ('lib/connexbd.php');
 
-    if(isset($_POST['email'])){
-        $stmt = $pdo->prepare("SELECT * FROM users WHERE email = ?");
-        $stmt ->execute([$_POST['email']]);
+    if(isset($_POST['username'])){
+        $stmt = $pdo->prepare("SELECT * FROM users WHERE username = ?");
+        $stmt ->execute([$_POST['username']]);
         $users = $stmt->fetch();
 
-        if($users && password_verify($_POST['pass'], $users['pass'])){
+        if($users && password_verify($_POST['passworld'], $users['passworld'])){
             //se connecter
             $_SESSION['id_user'] = $users['id'];
             $_SESSION['username'] = $users['username'];
-            header('location: index.php');
+            // header('location: index.php');
         }else{
-            echo 'Le mot de passe est incorrect';
+            echo 'The passworlds  do not match;
         }
      }
 ?>
