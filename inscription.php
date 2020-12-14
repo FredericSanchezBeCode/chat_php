@@ -1,14 +1,12 @@
 <section class="inscription">
         <form action="" method="POST">
-        <label for="">First Name</label><br>
-        <input type="text" name="first_name"><br>
-        <label for="">Last Name</label><br>
-        <input type="text" name="last_name"><br>
+        <label for="">Username</label><br>
+        <input type="text" name="username"><br>
         <label for="">Email</label><br>
         <input type="email" name="email"><br>
         <label for="">Password</label><br>
-        <input type="password" name="pass"><br>
-        <label for="">Password</label><br>
+        <input type="password" name="passworld"><br>
+        <label for="">Confirm your password</label><br>
         <input type="password" name="pass2"><br>
         <input type="submit" name="envoi" value="Envoyer">
         </form>
@@ -27,18 +25,17 @@
            // es ce que formulaire bien envoye
      if (isset($_POST['pass'])){
         // vérification des 2 mots de passe
-        if($_POST['pass'] == $_POST['pass2']){
+        if($_POST['passworld'] == $_POST['pass2']){
        
-            $stmt = $pdo -> prepare('INSERT into users (first_name, last_name, email, pass) values ( ?, ?, ?, ? )');
+            $stmt = $pdo -> prepare('INSERT into users (username, email, passworld) values ( ?, ?, ? )');
             echo "test";
 
             $stmt ->execute(array(
-                $_POST['first_name'],
-                $_POST['last_name'],
+                $_POST['username'],
                 $_POST['email'],
-                password_hash($_POST['pass'], PASSWORD_DEFAULT)
+                password_hash($_POST['passworld'], PASSWORD_DEFAULT)
             ));
-            header('location: index.php');
+            // header('location: index.php');
         }
         else {
             echo 'Les mots de passe ne correspondent pas';
