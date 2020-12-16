@@ -1,3 +1,11 @@
 11-25 est pas ce qu'on veux. Besoin de 1-15
 
 Pas author mais username
+
+
+notre db
+Server: sql7.freemysqlhosting.net
+Name: sql7382175
+Username: sql7382175
+Password: 2JfUZmMME8
+Port number: 3306
