@@ -48,12 +48,11 @@ function getMessages(){
     $content = $_POST['content'];
   
     // 2. Créer une requête qui permettra d'insérer ces données
-    $query = $db->prepare('INSERT INTO messages SET  content = :content, id_author = :id_author, created_at = NOW()');
-  
-    $query->execute([
-      "id_author" => $id_author,
-      "content" => $content
-    ]);
+    $query = $db->prepare('INSERT INTO messages VALUES (NULL,:content,:id_author,NOW())');
+    $query->execute(array(
+      ":id_author" => $id_author,
+      ":content" => $content
+    ));
   
     // 3. Donner un statut de succes ou d'erreur au format JSON
     echo json_encode(["status" => "success"]);
