@@ -1,14 +1,20 @@
 <?php
-$user = "root";
-$pass = "";
-// $user = "sql7382175";
-// $pass = "2JfUZmMME8";
+// $user = "root";
+// $pass = "";
+
+// $db = new PDO('mysql:host=localhost;dbname=chat_php;charset=utf8', $user, $pass, [
+//     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, 
+//     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+// ]);
+$user = "sql7382175";
+$pass = "2JfUZmMME8";
 // dbname=sql7382175
 // host=sql7.freemysqlhosting.net
-$db = new PDO('mysql:host=localhost;dbname=chat_php;charset=utf8', $user, $pass, [
-    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, 
-    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+$db = new PDO('mysql:host=sql7.freemysqlhosting.net;dbname=sql7382175;charset=utf8', $user, $pass, [
+  PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, 
+  PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
 ]);
+
 $task = "list";
 
 if(array_key_exists("task", $_GET)){

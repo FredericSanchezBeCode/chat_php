@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mer. 16 déc. 2020 à 11:14
+-- Généré le :  jeu. 17 déc. 2020 à 09:13
 -- Version du serveur :  10.4.10-MariaDB
 -- Version de PHP :  7.3.12
 
@@ -33,10 +33,10 @@ CREATE TABLE IF NOT EXISTS `messages` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `content` text NOT NULL,
   `id_author` int(11) NOT NULL,
-  `created_at` date NOT NULL DEFAULT current_timestamp(),
+  `created_at` date NOT NULL(),
   PRIMARY KEY (`id`),
   KEY `foreign key` (`id_author`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `messages`
@@ -46,7 +46,10 @@ INSERT INTO `messages` (`id`, `content`, `id_author`, `created_at`) VALUES
 (1, 'Le premier test', 1, '2020-12-09'),
 (2, 'Le deuxième test du groupe', 1, '2020-12-17'),
 (3, 'On différencie les messages maintenant', 2, '2020-12-17'),
-(4, 'c est partit mon cheri', 2, '2020-12-16');
+(4, 'c est partit mon cheri', 2, '2020-12-16'),
+(5, 'alpha br', 1, '2020-12-17'),
+(6, 'C\'est le matin', 2, '2020-12-17'),
+(7, 'C\'est le matin', 2, '2020-12-17');
 
 -- --------------------------------------------------------
 
