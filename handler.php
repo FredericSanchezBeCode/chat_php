@@ -32,7 +32,7 @@ function getMessages(){
     global $db;
   
     // 1. On requête la base de données pour sortir les 20 derniers messages
-    $resultats = $db->query("SELECT messages.content, users.username, messages.created_at FROM messages INNER JOIN users ON messages.id_author=users.id ORDER BY created_at DESC LIMIT 10");
+    $resultats = $db->query("SELECT messages.content, users.username, messages.created_at, messages.id FROM messages INNER JOIN users ON messages.id_author=users.id ORDER BY messages.id DESC LIMIT 20");
     // 2. On traite les résultats
     $messages = $resultats->fetchAll();
     // 3. On affiche les données sous forme de JSON

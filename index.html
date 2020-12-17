@@ -17,7 +17,7 @@
     <div class="user-inputs">
       <!-- expliqer le task=write -->
       <form action="handler.php?task=write" method="POST">
-        <input type="number" name="id_author" id="id_author" placeholder="username" value=1 >
+        <input type="number" name="id_author" id="id_author" placeholder="$username" value="$users['username']" >
         <input type="text" id="content" name="content" placeholder="Type in your message right here bro !">
         <button type="submit"> Send !</button>
       </form>
