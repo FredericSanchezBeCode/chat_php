@@ -1,28 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Notre super chat !</title>
-  <link rel="stylesheet" href="css/app.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TITLE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-  <header>
-    <h1>What a Chat Bro !</h1>
-  </header>
-  
-  <section class="chat">
-    <div class="messages">
-     
+
+    <div class="app">
+        <nav class="nav">
+            <div class="wrapper">
+                <div class="nav__user">
+                    <img src="/img/henrique.jpg" alt="user">
+                    <div class="nav__user--name">
+                        <p id="name">Henrique</p>
+                        <span>Online</span>
+                    </div>
+                </div>
+                <div class="nav__menu">
+                    <i class="fas fa-video"></i>
+                    <i class="fas fa-phone-alt"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </div>
+        </nav>
+
+        <div class="msgs">
+            <div class="wrapper" id="msg-container">
+            </div>
+        </div>
+
+        <div class="chat">
+            <div class="wrapper">
+                <form target="_blank" action="https://chat-groupe6.herokuapp.com/handler.php?task=write" id="form"
+                    method="POST">
+                    <i class="far fa-smile smiley"></i>
+                    <input type="hidden" name="id_author" id="author" value="1">
+                    <input type="text" name="content" id="content">
+                    <i class="fas fa-paperclip paperclip"></i>
+                    <i class="fas fa-camera camera"></i>
+                </form>
+                <i class="fas fa-microphone micro"></i>
+            </div>
+        </div>
     </div>
-    <div class="user-inputs">
-      <!-- expliqer le task=write -->
-      <form action="handler.php?task=write" method="POST">
-        <input type="number" name="id_author" id="id_author" placeholder="$username" value="$users['username']" >
-        <input type="text" id="content" name="content" placeholder="Type in your message right here bro !">
-        <button type="submit"> Send !</button>
-      </form>
-    </div>
-  </section>
-  <script src="js/app.js"></script>
+
+
+    <script src="js/script.js"></script>
 </body>
+
 </html>

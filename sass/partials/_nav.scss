@@ -1,0 +1,51 @@
+.nav {
+	background: #1c8b82;
+
+	@media screen and (min-width: 768px) {
+		border-top-left-radius: 1rem;
+		border-top-right-radius: 1rem;
+	}
+
+	.wrapper {
+		height: 6rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__user {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+
+		img {
+			width: 4rem;
+			border-radius: 50%;
+		}
+
+		&--name {
+			display: flex;
+			flex-direction: column;
+			color: #fff;
+
+			p {
+				font-weight: 700;
+				line-height: 1.3;
+			}
+
+			span {
+				font-size: 1.2rem;
+			}
+		}
+	}
+
+	&__menu {
+		color: #fff;
+		display: flex;
+		gap: 2rem;
+
+		i {
+			font-size: 2rem;
+		}
+	}
+}

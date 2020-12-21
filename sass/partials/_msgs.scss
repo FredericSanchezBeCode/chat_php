@@ -1,0 +1,48 @@
+.msgs {
+	height: 80%;
+	overflow-x: hidden;
+	overflow-y: scroll;
+
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+	}
+
+	p {
+		line-height: 1.4;
+		align-self: flex-end;
+		background: #e1ffc5;
+		color: #5a6369;
+		margin: 0.5rem 0;
+		padding: 1rem 2rem;
+		border-radius: 1rem;
+		max-width: 80%;
+
+		span {
+			margin-left: 0.5rem;
+			color: #a9b2b9;
+			font-size: 1.2rem;
+		}
+
+		i {
+			font-size: 1rem;
+			margin-left: 0.5rem;
+			color: #a9b2b9;
+		}
+	}
+
+	.guest {
+		align-self: flex-start;
+		text-align: left;
+		background: #fff;
+		color: #5a6369;
+	}
+
+	.user {
+		text-align: right;
+		align-self: flex-end;
+		background: #e1ffc5;
+		color: #5a6369;
+	}
+}
